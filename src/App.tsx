@@ -201,7 +201,7 @@ const EnvelopeAnimation = ({ onOpenComplete }) => {
 };
 
 function App() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [showLetter, setShowLetter] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [initialLetterOpened, setInitialLetterOpened] = useState(false);
@@ -224,6 +224,7 @@ function App() {
     else audio.play();
     setIsPlaying(!isPlaying);
   };
+
 
   const addHeart = (e) => {
     const newHeart = { id: Date.now(), x: e.clientX, y: e.clientY };
@@ -266,18 +267,16 @@ function App() {
 
       {/* Music Player */}
       <audio id="bgMusic" loop autoPlay>
-        <source src={Musicc} type="audio/mpeg" />
+      <source src={Musicc} type="audio/mpeg" />
       </audio>
+      
       <div className="fixed top-3 right-3 flex flex-col items-end gap-1 z-40">
-        <p className="text-xs font-acme text-gray-600 bg-white px-3 py-1 rounded-full shadow-md animate-bounce">
-          {isPlaying ? "Click to Stop music 🔇" : "Click to Play music 🎵"}
-        </p>
-        <button
-          onClick={(e) => { e.stopPropagation(); toggleMusic(); }}
-          className="p-2 bg-white rounded-full shadow-md hover:scale-110 transition-transform"
-        >
-          {isPlaying ? <MusicOff className="w-4 h-4 text-blue-600" /> : <Music className="w-4 h-4 text-blue-600" />}
-        </button>
+      <button
+      onClick={(e) => { e.stopPropagation(); toggleMusic(); }}
+      className="text-xs font-acme text-gray-600 bg-white px-3 py-1 rounded-full shadow-md hover:scale-110 transition-transform"
+      >
+      {isPlaying ? "Click to Stop music 🔇" : "Click to Play music 🎵"}
+      </button>
       </div>
 
       {/* Main Content */}
