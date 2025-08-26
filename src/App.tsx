@@ -4,17 +4,15 @@ import { Heart, Music, Music as MusicOff, X, Mail } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Card, CardContent } from "@/components/ui/card";
 import Musicc from './websong.mp3';
-import MImg1 from './images/IMG_1.jpg';
-import MImg2 from './images/IMG_2.jpg';
-import MImg3 from './images/IMG_3.jpg';
-// import Img1 from './images/pic1.gif';
-// import Img2 from './images/pic2.gif';
-// import Img3 from './images/pic3.jpg';
+import MImg1 from './images/IMG_1.jpeg';
+import MImg2 from './images/IMG_2.jpeg';
+import MImg3 from './images/IMG_3.jpeg';
 import Img3 from './images/cute.gif';
 import ScrollReveal from './components/ScrollReveal';
-import HeartCatcherGame from './components/HeartCatcherGame';
 import EnvelopeGif from './images/making_2.gif'; // Add this import for your GIF
 import BottomGif from './images/tacos.gif'
+
+
 
 // StickyNote component for comic-style sticky notes with a wiggle effect
 const StickyNote = ({ text, style, delay = 0 }) => (
@@ -174,7 +172,14 @@ const EnvelopeAnimation = ({ onOpenComplete }) => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: 'easeOut' }}
             >
-              <p className="text-gray-600 font-borel">💌 A letter for you... 💌</p>
+            <div className="text-center">
+              <p className="text-gray-600 font-borel text-lg">💌 A taco for you... 💌</p>
+              <div className="flex justify-center mt-2">
+                <span className="text-4xl">🌮</span>
+              </div>
+            </div>
+              {/* <p className="text-gray-600 font-borel text-lg">💌 A taco for you... 💌</p>
+              <span className="text-4xl mt-3">🌮</span> */}
             </motion.div>
           )}
         </motion.div>
@@ -264,7 +269,7 @@ function App() {
         <source src={Musicc} type="audio/mpeg" />
       </audio>
       <div className="fixed top-3 right-3 flex flex-col items-end gap-1 z-40">
-        <p className="text-xs font-comic text-gray-600 bg-white px-3 py-1 rounded-full shadow-md animate-bounce">
+        <p className="text-xs font-acme text-gray-600 bg-white px-3 py-1 rounded-full shadow-md animate-bounce">
           {isPlaying ? "Click to Stop music 🔇" : "Click to Play music 🎵"}
         </p>
         <button
@@ -326,26 +331,24 @@ function App() {
                 className="relative flex items-center justify-center"
               >
                 {/* Big Heart */}
-                <div className="relative flex items-center justify-center w-80 h-80">
-                  <Heart className="w-80 h-80 text-pink-500" fill="currentColor" />
-                  {/* Text inside Heart */}
-                  <span className="absolute font-poiret text-center px-4 max-w-[70%] leading-snug -translate-y-4 
-                                   text-base md:text-lg font-semibold 
-                                   bg-gradient-to-r from-white via-pink-100 to-red-100 bg-clip-text text-transparent
-                                   drop-shadow-md">
-                                    Since the day we stopped talking,<br />
-                                    I haven’t slept properly,<br />
-                                    not even once.<br />
-                                    {/* No matter what hour I fall asleep<br />
-                                    or when I wake up,<br />
-                                    I always wake up thinking of you.<br />
-                                    Everything I do leads me back to you,<br />
-                                    and every night,<br />
-                                    it’s only you I think about. */}
-                    {/* Since the day we stopped talking, I haven’t slept <br/>
-                    properly, not even once. No matter what hour I fall asleep <br/> */}
-                    {/* or when I wake up, I always wake up thinking of you. Everything I do somehow leads me back to you, and every night, it’s only you I think about. */}
-                  </span>
+                <div className="relative flex items-center justify-center w-90 h-90">
+                <Heart className="w-80 h-80 text-pink-500" fill="currentColor" />
+                
+                {/* Text inside Heart */}
+                <div className="absolute inset-0 flex items-center justify-center px-4 text-center -translate-y-4">
+                <p className="font-poiret text-base sm:text-lg md:text-xl font-semibold leading-tight text-white mt-1">
+                 When you find her,<br />
+                 you fight for her, you risk it all.<br />
+                 You put her before everything,<br />
+                 your future, your life, all of it.<br />
+                 And maybe the things you do to help <br />
+                 her aren’t always right. But you<br />
+                 know what? It doesn’t matter.<br />
+                 Because in your heart,<br />
+                 you know it’s worth<br />
+                 it.
+                </p>
+                </div>
                 </div>
               </motion.div>
             </motion.div>
@@ -396,19 +399,19 @@ function App() {
             text: "Office cabs always remind me of you",
             img: MImg1,
             caption: "Tap to feel what I feel",
-            modalMessage: "When you were in my arms & you gently move your fingers through my hair, that moment is one of the most beautiful memories of my life. I didn’t need words, because nothing could describe what I felt. It was just raw, quiet, and real. Everything else disappeared… the stress, the noise, the world. It was just you, me, and peace and I’ve never felt more complete than I did right then 😍"
+            modalMessage: "When you were in my arms & you gently move your fingers through my hair, that moment is one of the most beautiful memories of my life. I didn’t need words, because nothing could describe what I felt. It was just raw, quiet, and real. Everything else disappeared… the stress, the noise, the world. It was just you, me, and peace and I’ve never felt more complete than I did right then."
           },
           {
             text: "Our Third Wave session… unforgettable",
             img: MImg2,
             caption: "Click and feel every word",
-            modalMessage: "That surreal moment of holding hands, you resting your head on my shoulder, sipping chamomile tea, and playfully tickling your feet is still so fresh in my memory 😭"
+            modalMessage: "That surreal moment of holding hands, you resting your head on my shoulder, sipping chamomile tea, and playfully tickling your feet is still so fresh in my memory."
           },
           {
             text: "My best part of the day was watching you sleep",
             img: MImg3,
             caption: "Open this… it’s for you",
-            modalMessage: "Watching you sleep every night brought me so much peace. It was the best way to end my day. And when I used to stay for those extra 10 mins, those were the best moments, watching you sleep like a child. I still crave that every day. I remember how you used to blush when you told me you wanted to sleep on my biceps. That memory was so comforting, and I hope we can find that peace again ❤️"
+            modalMessage: "Watching you sleep every night brought me so much peace. It was the best way to end my day. And when I used to stay for those extra 10 mins, those were the best moments, watching you sleep like a child. I still crave that every day. I remember how you used to blush when you told me you wanted to sleep on my biceps. That memory was so comforting, and I hope we can find that peace again."
           }
         ].map((p, i) => (
           <ScrollReveal key={i} animation="slide" delay={i * 0.2} duration={0.8}>
@@ -476,15 +479,13 @@ function App() {
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300" />
             <h2 className="text-2xl font-bold text-pink-600 mb-4 font-dmtext text-center">My Heartfelt Apology</h2>
             <div className="bg-pink-50 p-6 rounded-lg border-2 border-dashed border-pink-300">
-              <p className="text-gray-700 italic leading-relaxed font-comic text-center text-lg">
-                I'm sorry my actions & behaviour, for the moments I let you down,<br />
-                {/* For the moments I let you down,<br /> */}
-                Regret fills every passing minute,<br />
-                In every lost and lonely sound.<br /><br />
-                I promise to mend what I have broken,<br />
-                To cherish you in every way,<br />
-                Please forgive my thoughtless errors,<br />
-                And help me find a brighter day.
+              <p className="text-gray-700 italic leading-relaxed font-edu text-center text-lg">
+                I’m deeply sorry for the way I acted, for the words I chose, the moments I wasn’t there, and the way my behavior made you feel unseen, hurt, or let down.<br />
+                Every second of the day I think about you, & I know you also think about me, I really hope you do.<br /><br />
+                I promise to mend what I have broken & clean up the mess I made, always ready to grow & change,<br />
+                to cherish you in every way,<br />
+                Please forgive my mistakes and errors.<br />
+                And finally, I want to hug you tightly and say sorry for all the mistakes I’ve made.
               </p>
               <div className="mt-4 flex justify-center">
                 <Heart className="w-8 h-8 text-pink-500" fill="currentColor" />
@@ -533,11 +534,11 @@ function App() {
                 <Heart className="w-8 h-8 text-pink-500 ml-2" fill="currentColor" />
               </div>
               <div className="space-y-3 font-tenor text-gray-700 leading-relaxed">
-                <p>I'm sorry for letting you down...</p>
+                <p>I'm SORRY for letting you down...</p>
                 <p>I know my words & action have hurt you, & I take full responsibility. I’m truly sorry, & I hate that I made you feel that way.</p>
                 <p>Please forgive me for my mistakes. I promise to learn, grow, & never make you feel that way again.</p>
                 <p>I’m asking for one last chance to show you that I’ve changed, and to rebuild what we had with love & care, because I know our connection isn't fragile.</p>
-                <p className="text-right font-bold mt-4">Thinking about you,<br />MK</p>
+                <p className="text-right font-bold mt-4">Thinking about you,<br />Tofu</p>
               </div>
             </div>
           </motion.div>
