@@ -492,10 +492,10 @@ function App() {
             <h2 className="text-2xl font-bold text-pink-600 mb-4 font-dmtext text-center">My Heartfelt Apology</h2>
             <div className="bg-pink-50 p-6 rounded-lg border-2 border-dashed border-pink-300">
               <p className="text-gray-700 italic leading-relaxed font-edu text-center text-lg">
-                I’m deeply sorry for the way I acted, for the words I chose, the moments I wasn’t there, and the way my behavior made you feel unseen, hurt, or let down.<br />
-                Every second of the day I think about you, & I know you also think about me, I really hope you do.<br /><br />
+                I’m deeply sorry for the way I acted, for the words I chose, the moments I wasn’t there and the way my behavior made you feel unseen, hurt or let down.<br />
+                Every second of the day I think about you & I know you also think about me, I really hope you do.<br /><br />
                 I promise to mend what I have broken & clean up the mess I made, always ready to grow & change,<br />
-                to cherish you in every way,<br />
+                to cherish you in every way.<br />
                 Please forgive my mistakes and errors.<br />
                 And finally, I want to hug you tightly and say sorry for all the mistakes I’ve made.
               </p>
