@@ -581,9 +581,9 @@ function App() {
         </div>
         <div className="space-y-3 font-tenor text-gray-700 leading-relaxed">
         <p>I'm SORRY for letting you down...</p>
-        <p>I know my words & actions have hurt you and I take full responsibility. I’m truly sorry and I hate that I made you feel that way.</p>
-        <p>Please forgive me for my mistakes. I promise to learn, grow, & never make you feel that way again.</p>
-        <p>I’m asking for one last chance to show you that I’ve changed, and to rebuild what we had with love & care, because I know our connection isn't fragile.</p>
+        <p>I know my words and actions have hurt you and I take full responsibility. I’m truly sorry and I hate that I made you feel that way.</p>
+        <p>Please forgive me for my mistakes. I promise to learn, grow, and never make you feel that way again.</p>
+        <p>I’m asking for one last chance to show you that I’ve changed, and to rebuild what we had with love and care, because I know our connection isn't fragile.</p>
         <p className="text-right font-bold mt-4">Thinking about you,<br />Tofu</p>
         </div>
         </div>
