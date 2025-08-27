@@ -17,7 +17,7 @@ import BottomGif from './images/tacos.gif'
 // StickyNote component for comic-style sticky notes with a wiggle effect
 const StickyNote = ({ text, style, delay = 0 }) => (
   <motion.div
-    className="absolute bg-yellow-200 p-2 rounded shadow-lg font-comic text-sm border-2 border-dashed border-yellow-300"
+    className="absolute bg-yellow-200 p-2 rounded shadow-lg font-cormorant text-sm border-2 border-dashed border-yellow-300"
     style={style}
     initial={{ opacity: 0, y: -20, rotate: -5 }}
     animate={{ opacity: 1, y: 0, rotate: [0, -3, 3, 0] }}
@@ -251,7 +251,7 @@ function App() {
 
   const stickyNotes = [
     { text: "I'm truly sorry!", style: { top: '12%', left: '4%' }, delay: 0.2 },
-    { text: "I will always choose you.", style: { top: '18%', right: '6%' }, delay: 0.4 },
+    { text: "I will always choose you!", style: { top: '18%', right: '6%' }, delay: 0.4 },
     // { text: "I regret my mistakes.", style: { bottom: '39.5%', left: '40%' }, delay: 0.6 },
     // { text: "Let's start fresh.", style: { bottom: '12%', right: '8%' }, delay: 0.8 },
     // { text: "My apology is sincere.", style: { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }, delay: 1 },
