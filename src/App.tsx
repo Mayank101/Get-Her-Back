@@ -210,6 +210,19 @@ function App() {
   const [gameCompleted, setGameCompleted] = useState(false);
   const [showBigHeart, setShowBigHeart] = useState(false);
   const [selectedPanel, setSelectedPanel] = useState(null);
+  const [firstLetterAutoHide, setFirstLetterAutoHide] = useState(true);
+  
+  
+  useEffect(() => {
+    let timer;
+    if (showLetter && firstLetterAutoHide) {
+      timer = setTimeout(() => {
+        setShowLetter(false);
+        setFirstLetterAutoHide(false); // ✅ disable auto-hide for future opens
+      }, 7000);
+    }
+    return () => clearTimeout(timer);
+  }, [showLetter, firstLetterAutoHide]);
 
   useEffect(() => {
     if (initialLetterOpened && !showContent) {
@@ -237,11 +250,11 @@ function App() {
   }
 
   const stickyNotes = [
-    { text: "I'm truly sorry!", style: { top: '14.5%', left: '4%' }, delay: 0.2 },
-    { text: "Forgive me, please.", style: { top: '21.5%', right: '6%' }, delay: 0.4 },
-    { text: "I regret my mistakes.", style: { bottom: '10%', left: '5%' }, delay: 0.6 },
-    { text: "Let's start fresh.", style: { bottom: '12%', right: '8%' }, delay: 0.8 },
-    { text: "My apology is sincere.", style: { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }, delay: 1 },
+    { text: "I'm truly sorry!", style: { top: '12%', left: '4%' }, delay: 0.2 },
+    { text: "I will always choose you.", style: { top: '18%', right: '6%' }, delay: 0.4 },
+    // { text: "I regret my mistakes.", style: { bottom: '39.5%', left: '40%' }, delay: 0.6 },
+    // { text: "Let's start fresh.", style: { bottom: '12%', right: '8%' }, delay: 0.8 },
+    // { text: "My apology is sincere.", style: { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }, delay: 1 },
   ];
 
   return (
@@ -511,7 +524,7 @@ function App() {
       </div>
 
       {/* Letter Modal */}
-      {showLetter && (
+      {/* {showLetter && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-md flex items-center justify-center p-4 z-50" 
           onClick={() => setShowLetter(false)}
@@ -541,6 +554,40 @@ function App() {
               </div>
             </div>
           </motion.div>
+        </div>
+      )} */}
+
+      {/* Letter Modal */}
+      {showLetter && (
+        <div 
+        className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-md flex items-center justify-center p-4 z-50" 
+        onClick={() => setShowLetter(false)}
+        >
+        <motion.div
+        className="bg-white bg-opacity-95 p-6 max-w-lg w-full relative rounded-lg shadow-xl overflow-y-auto max-h-[90vh]"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        onClick={(e) => e.stopPropagation()}
+        >
+        <button onClick={() => setShowLetter(false)} className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 bg-white rounded-full p-1">
+        <X className="w-5 h-5" />
+        </button>
+        <div className="prose max-w-none">
+        <div className="flex items-center justify-center mb-4">
+        <Heart className="w-8 h-8 text-pink-500 mr-2" fill="currentColor" />
+        <h3 className="text-2xl font-bold text-red-600 font-pacifico m-0">  Dearest Sarkarr  </h3>
+        <Heart className="w-8 h-8 text-pink-500 ml-2" fill="currentColor" />
+        </div>
+        <div className="space-y-3 font-tenor text-gray-700 leading-relaxed">
+        <p>I'm SORRY for letting you down...</p>
+        <p>I know my words & action have hurt you, & I take full responsibility. I’m truly sorry, & I hate that I made you feel that way.</p>
+        <p>Please forgive me for my mistakes. I promise to learn, grow, & never make you feel that way again.</p>
+        <p>I’m asking for one last chance to show you that I’ve changed, and to rebuild what we had with love & care, because I know our connection isn't fragile.</p>
+        <p className="text-right font-bold mt-4">Thinking about you,<br />Tofu</p>
+        </div>
+        </div>
+        </motion.div>
         </div>
       )}
 
