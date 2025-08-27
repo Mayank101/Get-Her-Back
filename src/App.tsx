@@ -411,13 +411,13 @@ function App() {
             text: "Office cabs always remind me of you",
             img: MImg1,
             caption: "Tap to feel what I feel",
-            modalMessage: "When you were in my arms, or when I was lying on your chest & you gently ran your fingers through my hair, that moment became one of the most beautiful memories of my life. I didn’t need words, because nothing could describe what I felt. It was just raw, quiet, and real. Everything else disappeared, the stress, the work, the noise, the world. It was just you, me, and peace. And I’ve never felt more complete than I did right then."
+            modalMessage: "When you were in my arms or when I was lying on your chest & you gently ran your fingers through my hair, that moment became one of the most beautiful memories of my life. I didn’t need words, because nothing could describe what I felt. It was just raw, quiet, and real. Everything else disappeared, the stress, the work, the noise, the world. It was just you, me, and peace. And I’ve never felt more complete than I did right then."
           },
           {
             text: "Our Third Wave session… unforgettable",
             img: MImg2,
             caption: "Click and feel every word",
-            modalMessage: "That surreal moment of holding hands, you resting your head on my shoulder, sipping chamomile tea, and playfully tickling your feet is still so fresh in my memory."
+            modalMessage: "That surreal moment of holding hands, you resting your head on my shoulder, sipping chamomile tea and playfully tickling your feet is still so fresh in my memory."
           },
           {
             text: "My best part of the day was watching you sleep",
