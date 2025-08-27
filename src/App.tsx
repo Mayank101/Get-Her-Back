@@ -45,7 +45,7 @@ const EnvelopeAnimation = ({ onOpenComplete }) => {
     if (showLetter) {
       const timer = setTimeout(() => {
         setShowLetter(false);
-      }, 6000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     }
@@ -219,7 +219,7 @@ function App() {
       timer = setTimeout(() => {
         setShowLetter(false);
         setFirstLetterAutoHide(false); // ✅ disable auto-hide for future opens
-      }, 7000);
+      }, 5000);
     }
     return () => clearTimeout(timer);
   }, [showLetter, firstLetterAutoHide]);
