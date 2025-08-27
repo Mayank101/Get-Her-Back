@@ -518,7 +518,7 @@ function App() {
               <p className="font-changa text-lg text-gray-800 text-center">I still see us this way, together and unbreakable!</p>
             </div>
             <img src={Img3} alt="Apology doodle" className="rounded-lg mb-4 w-full h-64 object-cover" />
-            <p className="text-gray-700 text-l font-dancing text-center">Please dont leave, I can live without you .</p>
+            <p className="text-gray-700 text-l font-dancing text-center">Please dont leave, I cant live without you .</p>
           </motion.div>
         </ScrollReveal>
       </div>
