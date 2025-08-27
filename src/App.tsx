@@ -45,7 +45,7 @@ const EnvelopeAnimation = ({ onOpenComplete }) => {
     if (showLetter) {
       const timer = setTimeout(() => {
         setShowLetter(false);
-      }, 7000);
+      }, 6000);
 
       return () => clearTimeout(timer);
     }
